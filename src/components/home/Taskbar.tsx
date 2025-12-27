@@ -168,6 +168,7 @@ const NewsPopup = () => {
 };
 
 // --- VOLUME POPUP ---
+// --- VOLUME POPUP ---
 const VolumePopup = ({
   volume,
   setVolume,
@@ -192,8 +193,9 @@ const VolumePopup = ({
         onChange={(e) => setVolume(Number(e.target.value))}
         className="absolute bottom-0 left-1/2 -translate-x-1/2 h-20 w-8 opacity-0 cursor-pointer z-50"
         style={{
-          appearance: "slider-vertical",
-          WebkitAppearance: "slider-vertical",
+          // Cast to 'any' to allow non-standard "slider-vertical"
+          appearance: "slider-vertical" as any,
+          WebkitAppearance: "slider-vertical" as any,
         }}
         title={`Volume: ${volume}%`}
       />
