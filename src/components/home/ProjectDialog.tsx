@@ -1,6 +1,25 @@
 import { X } from "lucide-react";
 
-export function ProjectDialog({ project, onClose, onTryNow }) {
+// 1. Define the shape of your Project object based on usage (title, description)
+interface Project {
+  title: string;
+  description: string;
+  // Add other fields here if needed (e.g., id: string, tags: string[], etc.)
+}
+
+// 2. Define the Props interface for the component
+interface ProjectDialogProps {
+  project: Project;
+  onClose: () => void;
+  onTryNow: () => void;
+}
+
+// 3. Apply the type to the destructured props
+export function ProjectDialog({
+  project,
+  onClose,
+  onTryNow,
+}: ProjectDialogProps) {
   return (
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[450px] z-50 animate-in zoom-in-95 duration-200 shadow-[0_0_20px_rgba(0,0,0,0.4)]">
       {/* Aero Glass Border */}
