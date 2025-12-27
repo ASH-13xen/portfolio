@@ -53,19 +53,19 @@ const startMenuData: Record<
       {
         label: "LinkedIn",
         icon: "/photos/iconlinkedin.png",
-        url: "https://linkedin.com",
+        url: "https://www.linkedin.com/in/ashank-mishra-667185328/",
         type: "link",
       },
       {
         label: "GitHub",
         icon: "/photos/icongithub.png",
-        url: "https://github.com",
+        url: "https://github.com/ASH-13xen",
         type: "link",
       },
       {
         label: "Instagram",
         icon: "/photos/iconinsta.png",
-        url: "https://instagram.com",
+        url: "https://www.instagram.com/ashank_mishra13/",
         type: "link",
       },
     ],
