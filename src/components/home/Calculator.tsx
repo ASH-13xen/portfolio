@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/unsupported-syntax */
 import React, { useState, useEffect, useRef } from "react";
 import { X, Minus, Square } from "lucide-react";
 
@@ -15,7 +16,6 @@ const Calculator = ({ onClose }: { onClose: () => void }) => {
   const handlePress = (val: string) => {
     if (val === "=") {
       try {
-        // eslint-disable-next-line no-eval
         setDisplay(eval(equation).toString());
         setEquation("");
       } catch {
@@ -74,7 +74,7 @@ const Calculator = ({ onClose }: { onClose: () => void }) => {
   return (
     <div
       ref={windowRef}
-      className="absolute w-60 bg-[#d9e4f1] border border-[#405875] rounded-lg shadow-2xl overflow-hidden z-[60] animate-in zoom-in-95 duration-200 select-none font-sans"
+      className="absolute w-60 bg-[#d9e4f1] border border-[#405875] rounded-lg shadow-2xl overflow-hidden z-60 animate-in zoom-in-95 duration-200 select-none font-sans"
       style={{
         left: position.x,
         top: position.y,
@@ -85,7 +85,7 @@ const Calculator = ({ onClose }: { onClose: () => void }) => {
       {/* Title Bar - THIS IS THE DRAG HANDLE */}
       <div
         onMouseDown={handleMouseDown}
-        className="h-8 bg-gradient-to-b from-[#eaf3fc] to-[#bdd6f2] flex items-center justify-between px-2 border-b border-[#8797aa] cursor-grab active:cursor-grabbing"
+        className="h-8 bg-linear-to-b from-[#eaf3fc] to-[#bdd6f2] flex items-center justify-between px-2 border-b border-[#8797aa] cursor-grab active:cursor-grabbing"
       >
         <div className="flex items-center text-xs font-normal text-slate-800 pointer-events-none">
           <span className="mr-1.5 font-bold">±</span> Calculator
@@ -145,7 +145,7 @@ const Calculator = ({ onClose }: { onClose: () => void }) => {
           ))}
           <button
             onClick={() => handlePress("C")}
-            className={`${btnClass} col-span-4 mt-1 border-[#bda2a2] bg-gradient-to-b from-[#fcdcdc] to-[#f2c7c7]`}
+            className={`${btnClass} col-span-4 mt-1 border-[#bda2a2] bg-linear-to-b from-[#fcdcdc] to-[#f2c7c7]`}
           >
             Clear
           </button>

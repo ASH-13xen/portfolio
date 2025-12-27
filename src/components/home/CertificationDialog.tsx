@@ -10,17 +10,17 @@ export const CertificationDialog = ({
   onClose: () => void;
 }) => {
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] z-[70] animate-in zoom-in-95 duration-200">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-105 z-70 animate-in zoom-in-95 duration-200">
       <div className="bg-[#1c4e66]/50 backdrop-blur-md p-1.5 rounded-lg border border-[#2d6a88] shadow-2xl">
         <div className="bg-[#fcfcfc] rounded flex flex-col h-full border border-gray-400">
           {/* Header */}
-          <div className="h-7 bg-gradient-to-b from-[#eaf6fd] via-[#d9f0fc] to-[#bee6fd] border-b border-[#a0c4de] flex items-center justify-between px-2 select-none">
+          <div className="h-7 bg-linear-to-b from-[#eaf6fd] via-[#d9f0fc] to-[#bee6fd] border-b border-[#a0c4de] flex items-center justify-between px-2 select-none">
             <span className="text-xs font-bold text-slate-800">
               Certificate Viewer
             </span>
             <button
               onClick={onClose}
-              className="w-8 h-4 flex items-center justify-center bg-gradient-to-b from-[#eebebb] to-[#cf7878] border border-[#a84747] hover:brightness-110 rounded-sm shadow-sm"
+              className="w-8 h-4 flex items-center justify-center bg-linear-to-b from-[#eebebb] to-[#cf7878] border border-[#a84747] hover:brightness-110 rounded-sm shadow-sm"
             >
               <X size={10} color="white" />
             </button>
@@ -35,7 +35,7 @@ export const CertificationDialog = ({
             <p className="text-xs font-semibold text-slate-500 mt-1 uppercase tracking-wide">
               {cert.issuer}
             </p>
-            <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
+            <div className="w-full h-px bg-linear-to-r from-transparent via-gray-300 to-transparent my-4"></div>
 
             <p className="text-sm text-gray-700 leading-relaxed mb-4">
               {cert.description}
@@ -56,7 +56,7 @@ export const CertificationDialog = ({
           <div className="bg-[#f0f0f0] p-2 border-t border-gray-300 flex justify-end">
             <button
               onClick={onClose}
-              className="px-4 py-1 text-xs border border-[#8e8f8f] bg-gradient-to-b from-[#f2f2f2] to-[#dcdcdc] rounded shadow-sm"
+              className="px-4 py-1 text-xs border border-[#8e8f8f] bg-linear-to-b from-[#f2f2f2] to-[#dcdcdc] rounded shadow-sm"
             >
               Close
             </button>
